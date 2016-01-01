@@ -68,6 +68,10 @@ def biligrab(url, *, debug=False, verbose=False, media=None, comment=None, cooki
     else:
         url_get_media = 'http://interface.bilibili.com/playurl?'
 
+    if cookie is None:
+        with open(os.path.expanduser('~/.config/bilidan'), 'r') as myfile:
+            cookie = myfile.read().replace('\n', '')
+
     def parse_url(url):
         '''Parse a bilibili.com URL
 
