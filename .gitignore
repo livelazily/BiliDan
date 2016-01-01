@@ -52,5 +52,8 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Pycharm
+.idea
+
 # ignore danmaku2ass.py
 danmaku2ass.py
