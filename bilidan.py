@@ -253,7 +253,7 @@ def biligrab(url, *, debug=False, verbose=False, media=None, comment=None, cooki
                 if 'vdpau' in i or 'vaapi' in i or 'vda' in i:
                     increase_fps = False
                     break
-        command_line = ['mpv', '--autofit', '950x540']
+        command_line = ['mpv']
         if mpv_version_gte_0_6:
             command_line += ['--cache-file', 'TMP']
         if increase_fps and mpv_version_gte_0_6:  # Drop frames at vo side but not at decoder side to prevent A/V sync issues
